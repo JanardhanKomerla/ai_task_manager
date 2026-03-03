@@ -1,0 +1,135 @@
+/* Task List Container */
+.task-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;   
+}
+
+/* Each Task Card */
+.task-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.task-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Overdue Border */
+.task-card.overdue {
+  border: 2px solid #ef4444;
+}
+
+/* Title Row */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Task Title */
+.task-title {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Priority Badge */
+.priority-badge {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.priority-high {
+  background-color: #ef4444;
+}
+
+.priority-medium {
+  background-color: #f59e0b;
+}
+
+.priority-low {
+  background-color: #10b981;
+}
+
+/* Description */
+.task-description {
+  margin: 10px 0;
+  color: #6b7280;
+}
+
+/* Meta Info */
+.task-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.btn-complete {
+  background-color: #10b981;
+}
+
+.btn-complete:hover {
+  background-color: #059669;
+}
+
+.btn-undo {
+  background-color: #f59e0b;
+}
+
+.btn-undo:hover {
+  background-color: #d97706;
+}
+
+.btn-edit {
+  background-color: #3b82f6;
+}
+
+.btn-edit:hover {
+  background-color: #2563eb;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+/* Overdue Text */
+.overdue-text {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 8px;
+}
