@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
+
 const api = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -21,7 +24,7 @@ api.interceptors.response.use(
   (error) => {
     if (error.response && error.response.status === 401) {
       localStorage.removeItem("token");
-      window.location.href = "/";
+      window.location.href = import.meta.env.BASE_URL || "/";
     }
     return Promise.reject(error);
   }

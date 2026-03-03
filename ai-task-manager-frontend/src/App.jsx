@@ -5,8 +5,10 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
 function App() {
+  const basename = import.meta.env.BASE_URL || "/";
+
   return (
-    <Router>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />

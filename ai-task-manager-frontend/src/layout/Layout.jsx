@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import "../styles/layout.css";
 
 function Layout({ children, onLogout }) {
@@ -8,6 +9,7 @@ function Layout({ children, onLogout }) {
       <main className="layout-main">
         {children}
       </main>
+      <Footer />
     </div>
   );
 }
